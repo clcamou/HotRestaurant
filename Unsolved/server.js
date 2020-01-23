@@ -12,7 +12,8 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
 //basic routes that sends the user first to the AJAX Page 
-require("./api/script")(app);
+require("./api/apiRoutes")(app);
+require("./api/htmlRoutes")(app);
 
 //lister 
 app.listen(PORT, function () {
